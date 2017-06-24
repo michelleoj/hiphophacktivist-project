@@ -10,9 +10,10 @@
     "react-router-dom": "^4.1.1",
     "react-router-redux": "next",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "redux-logger": "^2.6.1",
     "react-scripts": "0.9.x"
   },
   "scripts": {
