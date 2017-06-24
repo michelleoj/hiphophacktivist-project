@@ -1,13 +1,18 @@
 import {
-    SOME_ACTION,
+    FETCH_SHELTERS,
+    RECEIVE_SHELTERS,
 } from './actions';
 
-const mainReducer = (state, action) => {
+const initState = {
+    shelters: null,
+}
+
+const mainReducer = (state = initState, action) => {
     switch(action.type) {
-        case SOME_ACTION:
+        case RECEIVE_SHELTERS:
             return {
                 ...state,
-                key: action.value,
+                shelters: action.shelters,
             };
         default:
             return state;

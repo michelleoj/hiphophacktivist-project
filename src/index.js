@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import thunkMiddleware from 'redux-thunk';
-// import createLogger from 'redux-logger';
+import createLogger from 'redux-logger';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import mainReducer from './reducers';
+// import fetchShelters from './actions';
 
 import App from './App';
 import './index.css';
@@ -12,12 +13,18 @@ import './index.css';
 class ShelterFinder {
 
   constructor() {
+    this.loggerMiddleware = createLogger();
     this.store = createStore(
       mainReducer,
           applyMiddleware(
-              thunkMiddleware
+              thunkMiddleware,
+              this.loggerMiddleware
           )
       );
+
+    this.store.dispatch({
+      type: 'FETCH_SHELTERS',
+    });
 
     this.render();
   }

@@ -13,6 +13,7 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "redux-logger": "^2.6.1",
     "react-scripts": "0.9.x"
   },
   "scripts": {

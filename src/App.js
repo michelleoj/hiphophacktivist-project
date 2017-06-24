@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchShelters } from './actions';
 import Test from './Test';
 import './App.css';
 
@@ -13,4 +15,16 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchShelters: dispatch(fetchShelters()),
+    };
+}
+
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(App);
