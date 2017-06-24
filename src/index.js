@@ -8,6 +8,7 @@ import mainReducer from './reducers';
 // import fetchShelters from './actions';
 
 import Home from './Home';
+import Results from './Results';
 import './index.css';
 
 class ShelterFinder {
@@ -32,7 +33,12 @@ class ShelterFinder {
   render() {
     ReactDOM.render(
       <Provider store={this.store}>
-        <Home />
+        <Router history={browserHistory}>
+            <Route path='/' component={Home}/>
+            <Route path='/results' component={Results}/>
+            <Route path='/shelter/:id' component={Shelter}/>
+        </Router>
+
       </Provider>,
       document.getElementById('root')
     );

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchShelters } from './actions';
-import Test from './Test';
+import Search from './Search';
 import './Home.css';
 
 class Home extends Component {
@@ -20,7 +20,7 @@ class Home extends Component {
           <h1>NYC Shelter Search</h1>
         </header>
         <main>
-          <Test />
+          <Search />
         </main>
       </div>
     );

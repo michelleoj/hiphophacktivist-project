@@ -8,13 +8,20 @@ class Search extends Component {
   }
 
   render() {
-    return {
-      <div className="search">
+    return (
+      <form className="search">
         <input className="search-input" />
+        <select className="search-select">
+          <option>Manhattan</option>
+          <option>Brooklyn</option>
+          <option>Queens</option>
+          <option>Staten Island</option>
+          <option>Bronx</option>
+        </select>
         <button className="search-button" />
-      </div>
-    }
-  }
+      </form>
+    );
+  };
 }
 
 const mapDispatchToProps = (dispatch) => {
