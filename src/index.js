@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import mainReducer from './reducers';
 // import fetchShelters from './actions';
 
-import App from './App';
+import Home from './Home';
 import './index.css';
 
 class ShelterFinder {
@@ -32,7 +32,7 @@ class ShelterFinder {
   render() {
     ReactDOM.render(
       <Provider store={this.store}>
-        <App />
+        <Home />
       </Provider>,
       document.getElementById('root')
     );
